@@ -12,7 +12,8 @@ http://127.0.0.1:5500/index.html
 
 ## 📸 Preview
 
-(Add screenshot here)
+<img width="1435" height="810" alt="Знімок екрана 2026-06-04 о 17 15 44" src="https://github.com/user-attachments/assets/7688c648-e5a6-4f86-83f5-4a6b4dc2fce6" />
+
 
 ---
 
