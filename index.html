@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Management System Pro</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+<div class="app">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <i class="fa-solid fa-ticket"></i>
+            <span>TicketPro</span>
+        </div>
+
+        <nav class="menu">
+
+            <a href="#" class="menu-item active">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="#" class="menu-item">
+                <i class="fa-solid fa-list"></i>
+                <span>Tickets</span>
+            </a>
+
+            <a href="#" class="menu-item">
+                <i class="fa-solid fa-users"></i>
+                <span>Customers</span>
+            </a>
+
+            <a href="#" class="menu-item">
+                <i class="fa-solid fa-chart-pie"></i>
+                <span>Reports</span>
+            </a>
+
+            <a href="#" class="menu-item">
+                <i class="fa-solid fa-gear"></i>
+                <span>Settings</span>
+            </a>
+
+        </nav>
+
+    </aside>
+
+    <!-- MAIN -->
+
+    <main class="main-content">
+
+        <!-- HEADER -->
+
+        <header class="header">
+
+            <div>
+                <h1>Ticket Management System</h1>
+                <p>Manage customer support requests efficiently</p>
+            </div>
+
+            <div class="header-buttons">
+
+                <button id="themeBtn" class="theme-btn">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+
+                <button id="openModalBtn" class="primary-btn">
+                    <i class="fa-solid fa-plus"></i>
+                    New Ticket
+                </button>
+
+            </div>
+
+        </header>
+
+        <!-- STATS -->
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+                <h2 id="totalTickets">0</h2>
+                <span>Total Tickets</span>
+            </div>
+
+            <div class="stat-card">
+                <h2 id="openTickets">0</h2>
+                <span>Open</span>
+            </div>
+
+            <div class="stat-card">
+                <h2 id="progressTickets">0</h2>
+                <span>In Progress</span>
+            </div>
+
+            <div class="stat-card">
+                <h2 id="closedTickets">0</h2>
+                <span>Closed</span>
+            </div>
+
+        </section>
+
+        <!-- TOOLBAR -->
+
+        <section class="toolbar">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search customer or title..."
+            >
+
+            <select id="statusFilter">
+
+                <option value="all">All Tickets</option>
+                <option value="Open">Open</option>
+                <option value="In Progress">In Progress</option>
+                <option value="Closed">Closed</option>
+
+            </select>
+
+        </section>
+
+        <!-- TABLE -->
+
+        <section class="table-container">
+
+            <table>
+
+                <thead>
+
+                <tr>
+                    <th>ID</th>
+                    <th>Customer</th>
+                    <th>Title</th>
+                    <th>Priority</th>
+                    <th>Status</th>
+                    <th>Created</th>
+                    <th>Actions</th>
+                </tr>
+
+                </thead>
+
+                <tbody id="ticketTableBody">
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+</div>
+
+<!-- MODAL -->
+
+<div id="ticketModal" class="modal">
+
+    <div class="modal-content">
+
+        <div class="modal-header">
+
+            <h2>Create Ticket</h2>
+
+            <button id="closeModalBtn">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+        </div>
+
+        <div class="form-group">
+
+            <label>Customer Name</label>
+
+            <input
+                type="text"
+                id="customerInput"
+                placeholder="Customer name"
+            >
+
+        </div>
+
+        <div class="form-group">
+
+            <label>Issue Title</label>
+
+            <input
+                type="text"
+                id="titleInput"
+                placeholder="Issue title"
+            >
+
+        </div>
+
+        <div class="form-group">
+
+            <label>Description</label>
+
+            <textarea
+                id="descriptionInput"
+                rows="4"
+                placeholder="Describe issue..."
+            ></textarea>
+
+        </div>
+
+        <div class="row">
+
+            <div class="form-group">
+
+                <label>Priority</label>
+
+                <select id="priorityInput">
+
+                    <option>Low</option>
+                    <option>Medium</option>
+                    <option>High</option>
+
+                </select>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Status</label>
+
+                <select id="statusInput">
+
+                    <option>Open</option>
+                    <option>In Progress</option>
+                    <option>Closed</option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+        <button id="createTicketBtn" class="create-btn">
+            Create Ticket
+        </button>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
