@@ -4,8 +4,6 @@ Professional ticket management dashboard built with HTML, CSS and JavaScript.
 
 ## 🚀 Live Demo
 
-Add your GitHub Pages URL here:
-
 https://rmbrztrygs-hub.github.io/ticket-management-system/
 
 ---
