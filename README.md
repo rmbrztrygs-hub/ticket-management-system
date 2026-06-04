@@ -6,7 +6,7 @@ Professional ticket management dashboard built with HTML, CSS and JavaScript.
 
 Add your GitHub Pages URL here:
 
-http://127.0.0.1:5500/index.html
+https://rmbrztrygs-hub.github.io/ticket-management-system/
 
 ---
 
